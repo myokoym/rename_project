@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+if ARGV.size < 2
+  raise ArgumentError, "Usage: rename_project SOURCE DEST"
+end
+
+src  = ARGV[0]
+dest = ARGV[1]
+
+unless File.exist?(".git")
+  raise "Error: required .git"
+end
+
+Dir.glob("**/*") do |path|
+  system("inplace \"sed -e 's/#{src}/#{dest}/g'\" #{path}")
+end
+
+Dir.glob("**/#{src}*") do |path|
+  system("git", "mv", path, path.sub(src, dest))
+end
+
+if /\A[a-z]/ =~ src
+  src =  src.split(/_/).collect {|w| w.capitalize }.join
+  dest = dest.split(/_/).collect {|w| w.capitalize }.join
+end
+
+Dir.glob("**/*") do |path|
+  system("inplace \"sed -e 's/#{src}/#{dest}/g'\" #{path}")
+end
