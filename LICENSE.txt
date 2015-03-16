@@ -1,4 +1,4 @@
-Copyright (c) 2014 Masafumi Yokoyama
+Copyright (c) 2014 Masafumi Yokoyama <myokoym@gmail.com>
 
 MIT License
 
