@@ -4,16 +4,6 @@ A rename tool for projects that are managed on Git.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'rename_project'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install rename_project
 
 ## Usage
