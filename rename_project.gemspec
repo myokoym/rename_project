@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = RenameProject::VERSION
   spec.authors       = ["Masafumi Yokoyama"]
   spec.email         = ["myokoym@gmail.com"]
-  spec.summary       = %q{Make rename easy}
+  spec.summary       = %q{A rename tool for projects that are managed on Git.}
   spec.homepage      = "https://github.com/myokoym/rename_project"
   spec.license       = "MIT"
 

@@ -1,6 +1,6 @@
 # RenameProject
 
-Make rename easy.
+A rename tool for projects that are managed on Git.
 
 ## Installation
 
